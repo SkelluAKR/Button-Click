@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Click</title>
+  </head>
+
+  <body>
+    <button
+      onclick="
+      incClick(1);
+    "
+    >
+      Click me
+    </button>
+
+    <p class="js-click-times"></p>
+  </body>
+
+  <script>
+    let click = 0;
+    display();
+
+    function incClick(n) {
+      click += n;
+      display();
+    }
+
+    function display() {
+      document.querySelector(
+        ".js-click-times"
+      ).innerHTML = `No: of clicks: ${click}`;
+    }
+  </script>
+</html>
